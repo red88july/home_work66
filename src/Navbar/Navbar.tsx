@@ -1,4 +1,3 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import {Toolbar} from "@mui/material";
@@ -8,7 +7,6 @@ import MuiIcon from '../images/ic-mui.png';
 
 const Navbar = () => {
     return (
-        <>
             <AppBar >
                 <Toolbar sx={{backgroundColor: '#90caf9'}}>
                     <Box sx={{display: 'flex',
@@ -31,7 +29,6 @@ const Navbar = () => {
                     </Box>
                 </Toolbar>
             </AppBar>
-        </>
     );
 };
 
