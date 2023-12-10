@@ -1,0 +1,62 @@
+.cont-title-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+
+.con-header-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  border-top: 2px solid;
+}
+
+.con-card-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid #009688;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  width: 45rem;
+}
+
+.con-mealinfo-style {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.con-btn-style {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.typography-title-style {
+  margin-top: 2px;
+  color: #bf360c;
+  font-family: "Roboto Light";
+}
+
+.con-eventbtn-style {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.typography-totalcalories-style {
+  padding: 3px;
+  text-align: center;
+}
+
+.btn-edit,
+.btn-delete {
+  width: 100%;
+}
