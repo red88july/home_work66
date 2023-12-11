@@ -4,33 +4,22 @@ import {Link, Toolbar, Typography} from '@mui/material';
 import ReactIcon from '../../images/ic-react.png';
 import PlusIcon from '../../images/ic-plus.png';
 import MuiIcon from '../../images/ic-mui.png';
+import '../../style.css';
 
 const Navbar = () => {
   return (
     <AppBar>
       <Toolbar sx={{backgroundColor: '#90caf9'}}>
-        <Box sx={{
-          display: 'flex',
-          gap: 3,
-          flexWrap: 'wrap'
-        }}>
-          <Link sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 2,
-            paddingTop: '10px',
-            paddingBottom: '10px'
-          }} href="/">
-            <Box component="img" sx={{width: 50, height: 50}} src={ReactIcon}/>
-            <Box component="img" sx={{width: 25, height: 25}} src={PlusIcon}/>
-            <Box component="img" sx={{width: 50, height: 50}} src={MuiIcon}/>
+        <Box className="main-box-style">
+          <Link className="link-box-style" href="/">
+            <Box component="img" className="link-logo-style" src={ReactIcon}/>
+            <Box component="img" className="link-logo-style" src={PlusIcon}/>
+            <Box component="img" className="link-logo-style" src={MuiIcon}/>
           </Link>
-
-          <Box sx={{display: 'flex', flexDirection: 'column'}}>
+          <Box className="main-title-style">
             <Typography variant="h4" mb={1} color="#263238">Home work 66</Typography>
             <Typography variant="subtitle1" color="#37474f">Application Calories tracker</Typography>
           </Box>
-
         </Box>
       </Toolbar>
     </AppBar>

@@ -42,16 +42,14 @@ const TrackerForm = () => {
     event.preventDefault();
     setRequest(true);
 
-    const generatedId = Date.now();
-    console.log(generatedId);
     try {
       const contentData = {
-        id: generatedId,
+        id: Date.now(),
         meal: selectedMeal,
         description: meal.description,
         calories: meal.calories,
       };
-      await axiosApi.post(`/meal.json`, contentData);
+      await axiosApi.post(`/meal/${contentData.id}.json`, contentData);
 
     } catch (error) {
       console.error(`Error while submitting form: ${error}`);
@@ -65,7 +63,7 @@ const TrackerForm = () => {
 
       setSelectedMeal('');
       setRequest(false);
-      navigate('/');
+      navigate(`/`);
     }
   };
 

@@ -10,3 +10,9 @@ export interface MealsData {
   description: string,
   calories: number,
 }
+
+export interface FetchedData {
+    [key: string]: {
+        [key: string]: MealsData;
+    };
+}
