@@ -15,9 +15,11 @@ import {
 } from '@mui/material';
 import TypeWriter from '../../images/ic-typewriter.png';
 import ButtonSpinner from '../ButtonSpinner/ButtonSpinner';
+import {useNavigate} from 'react-router-dom';
 
 const TrackerForm = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const [meal, setMeal] = useState<MealProperties>({
     meal: '',
@@ -40,13 +42,17 @@ const TrackerForm = () => {
     event.preventDefault();
     setRequest(true);
 
+    const generatedId = Date.now();
+    console.log(generatedId);
     try {
       const contentData = {
+        id: generatedId,
         meal: selectedMeal,
         description: meal.description,
         calories: meal.calories,
       };
       await axiosApi.post(`/meal.json`, contentData);
+
     } catch (error) {
       console.error(`Error while submitting form: ${error}`);
     } finally {
@@ -59,6 +65,7 @@ const TrackerForm = () => {
 
       setSelectedMeal('');
       setRequest(false);
+      navigate('/');
     }
   };
 
